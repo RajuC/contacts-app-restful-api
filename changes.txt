@@ -1,0 +1,18 @@
+1) default.js - you can change the port
+
+2) in development.js, production.js and uat.js  change the db name
+    uri: 'mongodb://localhost/cars-app'
+
+3) (optional) add    export NODE_ENV=development
+    (# temporarily adding the env variable for contacts app) add to environment variable (to bashrc script in linux)
+
+4) In Mongoose.js change the db name (previously contact)  and model path
+
+5) change the model and add the required schema
+
+6) in routes change the api path names
+
+7) in controllers add the controllers (directed from route)
+
+8) you can add database and collection name to display on robo mongo
+
