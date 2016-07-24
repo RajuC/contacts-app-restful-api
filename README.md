@@ -9,4 +9,4 @@
 - node server.js
     - Contacts App server is running on 8099. . .
 
-make HTTP requests to understand the Rest Services using nodejs
+make HTTP requests to understand the Rest Services using nodejs (check contacts-app-restful-api/modules/core/server/routes/core.server.routes.js )
