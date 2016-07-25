@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactsApp">
+<head>
+    <meta charset="UTF-8">
+    <title>My Contacts App</title>
+    <link href="public/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+ <h1>This is my contacts app!</h1>
+ <label for="">Enter Name : </label>
+ <input type="text" ng-model="name">
+ <div class="container-ctrl1" ng-controller="ctrl1">
+     <div class="container-ctrl2" ng-controller="ctrl2">
+         {{name}} <!--Ctrl Scope2 -->
+
+     </div>
+ </div>
+ <div class="container-ctrl3" ng-controller="ctrl3">
+     <label for="">Enter Name : </label>
+     <input type="text" ng-model="name">
+    {{name}}  <!-- ctrl Scope3 -->
+ </div>
+ <div class="display-container">
+     {{name}}
+ </div>
+<script src="public/lib/angular/angular.min.js"></script>
+<script>
+    angular.module('contactsApp',[])
+            .controller('ctrl1',function () {
+
+            })
+            .controller('ctrl2',function () {
+
+            })
+            .controller('ctrl3',function () {
+
+            });
+
+</script>
+</body>
+</html>

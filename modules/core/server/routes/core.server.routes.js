@@ -5,6 +5,11 @@
 
 module.exports = function (app) {
     var controller =  require('../controllers/core.server.controller.js');
+    var mainController = require('../controllers/main.server.controller.js');
+
+    app
+        .route('/')
+        .get(mainController.index);
     app
         .route('/api/contact')
         .get(controller.getContacts)

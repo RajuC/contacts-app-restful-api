@@ -16,3 +16,61 @@
 
 8) you can add database and collection name to display on robo mongo
 
+
+
+
+
+// client side dependencies
+In public folder
+
+// install bower
+npm install -g bower
+
+// add client side dependencies
+bower init
+
+// to install angular js
+bower install angular -S
+
+// delete bower_componenets
+
+//create lib directory under public
+
+// create .bowerrc file  under root folder and tell where to install the frontend dependencies
+ add the directory
+
+bower install angular -S
+
+
+// add the script in views folder
+<script src="public/lib/angular/angular.min.js"></script>
+
+//when req comes for public folder dont send to routes , we have to render/ send  the static content/files
+ then add the     app.use("/public/", express.static(path.resolve('./public/'))); to express.js
+
+ // install bootsrap  // uses media query
+ bower install bootstrap -S
+
+
+//angular js elements and attributes are custom elements and attributes in standard html
+we use directives to write custom elements <dir>custom elements</dir
+
+intiate angualar with html / angualar starts
+<html ng-app="contacts-app">  //mandatory, the whole html gets a bubble called $rootScope(object literal) if it is on div then that div get a bubble
+
+then
+start global variablee
+<script> angular.module("contacts-app",[])</script>  // mandatory
+
+
+angular - 2 way binding (ng-model publish  and expressions subscribe
+
+ng-model directive
+<input ng-model="name">  when we give input takes the name got to bubble $rootScope and assign the value to variable name
+
+{{name}} // angualr expression which goes and find the property name in the bubble $rootScope
+
+we can create multiple ng-apps and have different (scopes)
+
+we cannot have nested $rootScopes but can have child scopes (nested scopes) which is ng-controller
+

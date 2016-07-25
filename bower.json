@@ -1,0 +1,25 @@
+{
+  "name": "contacts-app",
+  "description": "Contacts application",
+  "main": "server.js",
+  "authors": [
+    "RajuC <raju.chittimallea.com>"
+  ],
+  "license": "BSD-2-Clause",
+  "keywords": [
+    "nodejs",
+    "contacts"
+  ],
+  "homepage": "https://github.com/RajuC/contacts-app-restful-api",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.6"
+  }
+}
