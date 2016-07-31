@@ -87,12 +87,26 @@ create app and controllers folder in the path core/client/
 
 create config.js in app folder
 
-create a simpleController.js in controllers folder
+create a core.client.controller.js in controllers folder
 
 add the config and simpleControllers path to the script in core/server/views/index.server.view.html
 
 npm install -S glob@5.0.13
 npm install -S chalk
+
+init.js under client
+
+create folders css, routes, services, img, views, directives under core/client/
+create core.client.module.js under core/client/ (security concerns)
+
+create core.client.controller.js under core/client/controller/
+
+edit index.html include the controllers
+
+bower install angular-ui-router -S
+
+adding the dependencies angular-ui-router and    in the client/core/app/config.js
+
 
 
 

@@ -23,10 +23,11 @@ var initGlobalConfig = function () {
     //gives the environment which the app is running on
     var environment = process.env.NODE_ENV;
     //extends the two configuration files
-        config = _.extend(defaultConfig,defaultAssetConfig,require('./env/'+ ( environment || 'development')));
+    config = _.extend(defaultConfig,defaultAssetConfig,require('./env/'+ ( environment || 'development')));
 
     config.client.files = getGlobbedPaths(path.join(process.cwd(),config.client.location),
         process.cwd().replace(new RegExp(/\\/g),'/'));
+    // console.log(config.client.files); //  [ '/modules/core/client/' ]
 
     return config;
 };

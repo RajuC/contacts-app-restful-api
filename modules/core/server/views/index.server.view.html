@@ -7,37 +7,18 @@
 </head>
 <body>
  <h1>This is my contacts app!</h1>
- <label for="">Enter Name : </label>
- <input type="text" ng-model="name">
- <div class="container-ctrl1" ng-controller="ctrl1">
-     <div class="container-ctrl2" ng-controller="ctrl2">
-         {{name}} <!--Ctrl Scope2 -->
-
-     </div>
- </div>
- <div class="container-ctrl3" ng-controller="ctrl3">
-     <label for="">Enter Name : </label>
-     <input type="text" ng-model="name">
-    {{name}}  <!-- ctrl Scope3 -->
- </div>
- <div class="display-container">
+ <div class="container" ng-controller="ContactsCntrl" >
      {{name}}
  </div>
+
+ <!--vendor libraries-->
+<script src="public/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="public/lib/angular/angular.min.js"></script>
+
+ <!--application dependencies-->
  <script src="modules/core/client/app/config.js"></script>
- <script src="modules/core/client/controllers/simpleController.js"></script>
-<script>
-    angular.module('contactsApp',[])
-            .controller('ctrl1',function () {
-
-            })
-            .controller('ctrl2',function () {
-
-            })
-            .controller('ctrl3',function () {
-
-            });
-
-</script>
+ <script src="modules/core/client/app/init.js"></script>
+ <script src="modules/core/client/core.client.module.js"></script>
+ <script src="modules/core/client/controllers/core.client.controller.js"></script>
 </body>
 </html>
