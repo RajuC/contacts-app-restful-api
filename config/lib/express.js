@@ -8,7 +8,8 @@ var express = require('express'), // web server framework
     bodyParser = require('body-parser'),
     path = require('path'),
     consolidate = require('consolidate'),
-    swig = require('swig');  // 3rd party library
+    swig = require('swig'),
+    config = require('../config');  // 3rd party library
 
 
 
@@ -45,4 +46,8 @@ module.exports.initMakePublicDirStatic = function (app) {
     //app.use(express.static('public'));   // make the public folder static
 
     app.use("/public/", express.static(path.resolve('./public/')));
+    //to access the client files from the config for static files
+    config.client.files.forEach(function(staticPath){
+        app.use(staticPath, express.static(path.resolve('./'+ staticPath)));
+    })
 }

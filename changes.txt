@@ -74,3 +74,25 @@ we can create multiple ng-apps and have different (scopes)
 
 we cannot have nested $rootScopes but can have child scopes (nested scopes) which is ng-controller
 
+
+friday july 29
+
+create default.js(to access client side resources) in assets folder
+
+edit config.js add glob paths // need to write from rajesh
+
+edit express.js to add the config path for static files to express.js
+
+create app and controllers folder in the path core/client/
+
+create config.js in app folder
+
+create a simpleController.js in controllers folder
+
+add the config and simpleControllers path to the script in core/server/views/index.server.view.html
+
+npm install -S glob@5.0.13
+npm install -S chalk
+
+
+
