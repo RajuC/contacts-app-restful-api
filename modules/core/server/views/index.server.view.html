@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="contactsApp">
+<html lang="en" ng-app="ContactsApp">
 <head>
     <meta charset="UTF-8">
     <title>My Contacts App</title>
     <link href="public/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
- <h1>This is my contacts app!</h1>
- <div class="container" ng-controller="ContactsCntrl" >
-     {{name}}
- </div>
+<!--use single quotes for ng-include-->
+<div ng-include="'modules/core/client/views/navigation.core.tpl.html'"></div>
 
- <!--vendor libraries-->
-<script src="public/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+<div ui-view>
+
+</div>
+<!--vendor libraries-->
 <script src="public/lib/angular/angular.min.js"></script>
+<script src="public/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 
- <!--application dependencies-->
- <script src="modules/core/client/app/config.js"></script>
- <script src="modules/core/client/app/init.js"></script>
- <script src="modules/core/client/core.client.module.js"></script>
- <script src="modules/core/client/controllers/core.client.controller.js"></script>
+<!--application dependencies-->
+<script src="modules/core/client/app/config.js"></script>
+<script src="modules/core/client/app/init.js"></script>
+<!-- <script src="modules/core/client/core.client.module.js"></script>-->
+<script src="modules/core/client/routes/core.client.route.js"></script>
+<script src="modules/core/client/controllers/core.client.controller.js"></script>
 </body>
 </html>

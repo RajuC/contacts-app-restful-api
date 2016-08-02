@@ -5,4 +5,4 @@
 'use strict'
 
 //global variable registering module and empty dependencies
-ApplicationConfiguration.registerModule('core');
+ApplicationConfiguration.registerModule('ContactsApp',[]);

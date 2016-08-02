@@ -107,6 +107,11 @@ bower install angular-ui-router -S
 
 adding the dependencies angular-ui-router and    in the client/core/app/config.js
 
+bower install bootstrap -S
+
+add nav bar in the index.html
+ add the contacts in controller
+ add the state provider in router
 
 
 

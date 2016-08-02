@@ -11,9 +11,9 @@ var ApplicationConfiguration  = (function(){
 
     var _registerModule = function(moduleName, dependencies){
         // create angular module
-        angular.module(_applicationModuleName, dependencies || []);
+        angular.module(moduleName, dependencies || []);
         angular.module(_applicationModuleName).requires.push(moduleName);
-    }
+    };
 
     return {
         applicationModuleName: _applicationModuleName,

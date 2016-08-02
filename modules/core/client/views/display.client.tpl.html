@@ -1,0 +1,14 @@
+<div class="grid-contacts-container" ng-controller="ContactsCtrl">
+    <table class="table">
+        <thead>
+        <tr>
+            <th ng-repeat="field in fields" ng-bind="field"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="contact in contacts">
+            <th ng-repeat="(key, value) in contact" ng-bind="value"></th>
+        </tr>
+        </tbody>
+    </table>
+</div>
