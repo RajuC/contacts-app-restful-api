@@ -113,5 +113,55 @@ add nav bar in the index.html
  add the contacts in controller
  add the state provider in router
 
+ deisgn the templates and route through them using angular routes
+================================================================================================================
+ Notes: routers(Layer1) are used to manage and switch between the templates in a SPA(Single page appliations).
+ routers is one of layers
+ controllers(Layer2): which has scope and controllers does the data binding and the views are used these stored data to diplay($digest)
+services(Layer3): divided into
+        1) service : uses function constructors (by default return current object (this)).
+            a) builtin services -> $http $q, $resource (starts with $)
+            b) custom services -> using Service , factory provider we have to write a custom service
+         2) factory : modular design pattern / revealing object(retutns object literal)
+         3) provders: configuration related
+promises(layer4) javascript related
+        - async implemented using call back fucntions
+        - nested call backs- call back within callbacks (complexity and maintainability is hign and debugging is difficult),
+         - To solve this we need promises
+         -  promise definition : associated with two parties (P1-ask  P2-promise{instead of responding})
+                                   after task completed P2 responds(success/fulfill or failure/reject) using callbacks
+                                   acts like 3 way handshaking {1)ask, 2)promise, 3)resolves and gives response after task completed}
+                 a) fulfilled
+                 b) reject
 
+         In angular prmises are given 3 ways
+
+              1) $http - used for communication over network routes(/api/contacts) and methods change
+              2) $q - everything on the client side (layers - routers, filters, controllers, services) communicate using $q
+              3) $resource - if routes(/api/contacts) is same for different method we use $resource
+
+            angular - $resouce -> bigger wrapper
+            angular - $http    -> wrapped inside $resouce
+            angular - $q   -> wrapped inside $http
+            javascript - promise  ->  wrapped inside $q
+
+
+dependency injection
+   - all layers depend on each other
+   - IOC inversion of control --
+   - In angular does dependency injection using IOC
+   - In nodejs we do the dependency injection
+   - angular does the automatic garbage collection
+   - controllers will ask for $scope and injects into funciton (register module an app) angular.module('core').contoller('ctl1',fn($scope){)
+   - angular maintains registry(map- key and values) for each layer
+   - initially contoller name will be key and function with scope will be value
+   - similary in service, angular.module('core').factory('Serv1',fn(){}) serv1 will be key and func is value
+   - controller ask for service angular.module('core').contoller('ctl1',fn($scope,Serv1)
+   - similary for filter,angular.module('core').filter('Filt1',fn(){})
+   - we cannot inject $scope into services and filters
+   - controller ask for service angular.module('core').contoller('ctl1',fn($scope,Serv1,Filt1)
+   - we can use diff inbuilt services like $http, $q ,$digest, $resource
+
+
+ ==============================================================================================================
 
