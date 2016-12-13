@@ -27,6 +27,5 @@ angular
         .controller('saveCtrl', function($scope,SaveContactsService){
             $scope.saveContact = function(contact){
                 console.log("raja raja raja....")
-                console.log(contact);
-            }
+                console.log(contact);}
             });
