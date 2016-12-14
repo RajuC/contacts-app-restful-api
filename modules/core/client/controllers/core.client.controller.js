@@ -8,10 +8,12 @@
 // controller will have access to scope object
 angular
     .module('ContactsApp')  // before was core
-        .controller('ContactsCtrl',function ($scope,ContactsService) {
+        .controller('ContactsCtrl',['$scope','ContactsService', '$state' ,function ($scope, ContactsService, $state) {
            // handle the success and failure promise from service
+            console.log("getting all the contacts..");
             var contactsPromise = ContactsService._getContacts();
             var successCallback = function(response){
+                console.log(response);
                 $scope.contacts = response;
                 $scope.fields = Object.keys($scope.contacts[0]) || [];
             };
@@ -23,9 +25,10 @@ angular
                 .success(successCallback)
                 .error(failureCallback);
 
-        })
-        .controller('saveCtrl', function($scope,SaveContactsService){
+        }])
+        .controller('SaveCtrl',['$scope', 'ContactsService', function($scope, ContactsService){
             $scope.saveContact = function(contact){
                 console.log("raja raja raja....")
                 console.log(contact);}
-            });
+            }]
+            );

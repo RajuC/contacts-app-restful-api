@@ -10,15 +10,14 @@ angular
         var _getContacts = function () {
             var promise = $http.get(url);
             return promise;
-        }
+        },
+        _saveContact = function(contact) {
+            console.log("you want to save contact ??")
+            var savePromise = $http.post(url, contact);
+            return savePromise
+        }; 
         return {
-            _getContacts : _getContacts
+            _getContacts : _getContacts,
+            _saveContact : _saveContact
         };
-    })
-    .factory('SaveContactsService',function ($http) {
-        var _saveContact = function (contact) {
-            var promise = $http.post(url,contact);
-            return promise;
-        }
-    })
-
+    });
