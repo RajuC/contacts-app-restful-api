@@ -13,8 +13,8 @@ module.exports.saveContact = function (ContactToSave,callback) {
     var contact = new Contact(ContactToSave);  // creates a new object whch is of model
     contact.save(function (err) {
         callback(err,contact);
-    })
-}
+    });
+};
 
 
 module.exports.getAllContacts = function (callback){
@@ -22,14 +22,14 @@ module.exports.getAllContacts = function (callback){
     Contact.find({}, function(err,contacts) {
             callback(err,contacts);
     });
-}
+};
 
 
 module.exports.findContactById = function (id,callback) {
     Contact.findById(id, function(err, contact) {
         callback(err,contact);
     });
-}
+};
 
 
 module.exports.updateContact = function (id, contactToUpdate,callback) {
@@ -37,7 +37,7 @@ module.exports.updateContact = function (id, contactToUpdate,callback) {
     Contact.findByIdAndUpdate(id,contactToUpdate, function(err, contact) {
             callback(err,contact);
     });
-}
+};
 
 
 module.exports.deleteContactById = function (id,callback) {
@@ -45,4 +45,4 @@ module.exports.deleteContactById = function (id,callback) {
         callback(err,{"status":"successfully deleted " + id});
     });
 
-}
+};

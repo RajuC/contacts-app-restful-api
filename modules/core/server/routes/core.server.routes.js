@@ -23,5 +23,5 @@ module.exports = function (app) {
     
     app.
         param('id',controller.validateContactId);
-}
+};
 

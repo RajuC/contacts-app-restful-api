@@ -29,9 +29,9 @@ module.exports.createContact = function (req,res) {
             res.json(contact);
         }
 
-    })
+    });
 
-    }
+    };
 
 // get contacts
 module.exports.getContacts = function(req,res){
@@ -49,8 +49,8 @@ module.exports.getContacts = function(req,res){
             res.json(contacts);
         }
 
-    })
-}
+    });
+};
 
 
 //get contact by id
@@ -68,8 +68,8 @@ module.exports.getContactById = function (req,res) {
             res.json(contact);
         }
 
-    })
-}
+    });
+};
 
 
 
@@ -89,8 +89,8 @@ module.exports.updateContact = function(req,res){
             res.json(contact);
         }
 
-    })
-}
+    });
+};
 
 
 
@@ -106,12 +106,12 @@ module.exports.deleteContact = function(req,res){
                 .json([{message: "error in delete contact by id"}]);
         } else {
             res.status(200);
-            res.json(contact);
+            res.json("Successfully deleted the Contact!!");
         }
 
-    })
+    });
 
-}
+};
 
 // validate the contact id and forwarding it to required request (getcontactbyid and update)
 module.exports.validateContactId = function(req,res,next,id){
@@ -128,9 +128,9 @@ module.exports.validateContactId = function(req,res,next,id){
             metadata.model = contact;
         }
 
-    })
+    });
     next();
-}
+};
 
 
 
@@ -151,7 +151,7 @@ module.exports.updateContactByParam = function(req,res){
         res.status(200);
         res.json(contact);
     }
-}
+};
 
 
 

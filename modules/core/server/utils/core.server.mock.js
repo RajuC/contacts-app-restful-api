@@ -16,7 +16,7 @@ module.exports.saveContact = function (contact){
     cloneContact.id = chance.guid();
     contacts.push(cloneContact);
     return cloneContact;
-}
+};
 
 
 module.exports.getContacts = contacts;
@@ -44,7 +44,7 @@ function genMockContacts () {
 module.exports.updateContact = function(index, updatedContact){
     contacts[index] = updatedContact;
     return updatedContact;
-}
+};
 
 
 // not using here
@@ -63,7 +63,7 @@ module.exports.updateContactByEachField = function (id,reqContact) {
         }
     });
     return updatedContact;
-}
+};
 
 
 
@@ -81,7 +81,7 @@ module.exports.getContactById = function (id) {
         }
         });
     return foundContact;
-}
+};
 
 
 //To delete contact by id
@@ -94,4 +94,4 @@ module.exports.deleteContact = function (id) {
             return bool;
         }
     }
-}
+};
